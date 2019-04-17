@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/53578372/error-in-the-angular-compiler-requires-typescript-3-1-1-and-3-2-0-but-3-2-1-w
+
+https://www.primefaces.org/primeng/#/setup
+
+npm install --save @angular/material @angular/cdk
+
+
+https://stackoverflow.com/questions/38796541/how-to-add-font-awesome-to-angular-2-cli-project
+"node_modules/font-awesome/css/font-awesome.css"
+
