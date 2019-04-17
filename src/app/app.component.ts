@@ -11,7 +11,7 @@ export class PrimeCar implements Car {
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
+    styleUrls: ['./app.component.scss'],
     providers: [CarService]
 })
 export class AppComponent implements OnInit {
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
 
     loginFunction() {
         console.log('Login button click');
-        this.login  = new Login('a', 'b');
+        this.login  = new Login();
         this.login.usernameOrEmail = 'usernameOrEmail';
         this.login.password = '123456';
         console.log(this.carService.getAccessToken(this.login));
