@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from './domain/car';
-import {Login} from './domain/login';
+import { Car } from './_model/car';
+import {Login} from './_model/login';
 
-import { CarService } from './services/carservice';
+import { CarService } from './_services/carservice';
 
 export class PrimeCar implements Car {
     constructor(public vin?, public year?, public brand?, public color?) {}
@@ -15,7 +15,6 @@ export class PrimeCar implements Car {
     providers: [CarService]
 })
 export class AppComponent implements OnInit {
-
     displayDialog: boolean;
 
     car: Car = new PrimeCar();
@@ -24,7 +23,7 @@ export class AppComponent implements OnInit {
 
     newCar: boolean;
 
-    login: Login;
+    login: Login = new Login();
 
     cars: Car[];
 
@@ -70,9 +69,8 @@ export class AppComponent implements OnInit {
 
     loginFunction() {
         console.log('Login button click');
-        this.login  = new Login();
-        this.login.usernameOrEmail = 'usernameOrEmail';
-        this.login.password = '123456';
+        // this.login.usernameOrEmail = 'kalog';
+        // this.login.password = 'admin12345678';
         console.log(this.carService.getAccessToken(this.login));
     }
     onRowSelect(event) {

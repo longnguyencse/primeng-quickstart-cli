@@ -7,12 +7,24 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
-
+import {PanelMenuModule} from 'primeng/panelmenu';
 import { AppComponent } from './app.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
+import {RouterModule} from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        SidebarComponent,
+        TopbarComponent,
+        FooterComponent,
+        LoginComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
@@ -21,8 +33,12 @@ import { AppComponent } from './app.component';
         TableModule,
         HttpClientModule,
         InputTextModule,
+        RouterModule,
         DialogModule,
-        ButtonModule
+        ButtonModule,
+        PanelMenuModule,
+        AppRoutingModule,
+        RouterModule.forRoot([])
     ],
     providers: [],
     bootstrap: [AppComponent]

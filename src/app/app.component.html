@@ -1,17 +1,12 @@
-<div class="ui-g ui-fluid center">
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-            <input type="text" pInputText placeholder="Username">
-        </div>
-    </div>
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
-            <input type="text" pInputText placeholder="Password">
-        </div>
-    </div>
-    <div class="ui-g-12 ui-md-4">
-        <p-button label="Click" (click)="loginFunction()"></p-button>
-    </div>
+<div class="layout-wrapper">
+    <app-topbar></app-topbar>
+    <app-sidebar></app-sidebar>
+    <app-footer></app-footer>
 </div>
+
+
+<router-outlet></router-outlet>
+
+<div class="wrap content" *ngIf=""
+
+

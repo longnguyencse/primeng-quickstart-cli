@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Car } from '../domain/car';
+import { Car } from '../_model/car';
 
 @Injectable()
 export class CarService {
@@ -15,7 +15,6 @@ export class CarService {
     }
 
     getAccessToken(login) {
-        // return this.http.post('/api/auth/signin', {'usernameOrEmail': 'nqlong1@gmail.com', 'password': '123456'})
         return this.http.post('/api/auth/signin', login)
             .toPromise()
             .then(res => res);

@@ -1,3 +1,9 @@
+.parent {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
 .center{
   background-color: rebeccapurple;
+  flex: 1;
 }
