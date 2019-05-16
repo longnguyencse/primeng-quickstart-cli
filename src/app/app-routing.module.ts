@@ -11,22 +11,22 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    outlet: 'popup'
+    // outlet: 'popup'
   },
   {
     path: 'welcome',
     component: AppComponent,
-    outlet: 'popup'
+    // outlet: 'popup'
   },
   {
     path: 'contact',
     component: ContactComponent,
-    outlet: 'popup'
+    // outlet: 'popup'
   },
   { path: '',
     redirectTo: '/welcome',
     pathMatch: 'full' },
-  // { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
