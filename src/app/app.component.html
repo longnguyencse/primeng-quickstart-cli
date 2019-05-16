@@ -1,12 +1,15 @@
+<nav>
+    <ul>
+        <li routerLinkActive="active">
+            <a routerLink="/welcome" > Welcome</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/contact" > Contact </a>
+        </li>
+    </ul>
+</nav>
 <div class="layout-wrapper">
-    <app-topbar></app-topbar>
-    <app-sidebar></app-sidebar>
-    <app-footer></app-footer>
+    <router-outlet></router-outlet>
 </div>
-
-
-<router-outlet></router-outlet>
-
-<div class="wrap content" *ngIf=""
-
+<app-footer></app-footer>
 

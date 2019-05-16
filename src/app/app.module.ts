@@ -13,9 +13,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
-import {RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +27,10 @@ import { HomeComponent } from './home/home.component';
         TopbarComponent,
         FooterComponent,
         LoginComponent,
-        HomeComponent
+        HomeComponent,
+        WelcomeComponent,
+        ContactComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
@@ -37,10 +43,13 @@ import { HomeComponent } from './home/home.component';
         DialogModule,
         ButtonModule,
         PanelMenuModule,
-        AppRoutingModule,
-        RouterModule.forRoot([])
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+    constructor(router: Router) {
+    }
+}
