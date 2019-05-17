@@ -5,18 +5,27 @@ import { Car } from '../_model/car';
 @Injectable()
 export class CarService {
 
-    constructor(private http: HttpClient) {}
+    constructor(private httpClient: HttpClient) {}
 
     getCarsSmall() {
-        return this.http.get<any>('assets/data/cars-small.json')
+        return this.httpClient.get<any>('assets/data/cars-small.json')
             .toPromise()
             .then(res => <Car[]> res.data)
             .then(data => data);
     }
 
     getAccessToken(login) {
-        return this.http.post('/api/auth/signin', login)
+        return this.httpClient.post('/api/auth/signin', login)
             .toPromise()
             .then(res => res);
+    }
+
+    getCarsLarge() {
+        return this.httpClient.get<any>('assets/showcase/resources/data/cars-large.json')
+            .toPromise()
+            .then(res => <Car[]> res.data)
+            .then(data => {
+                return data;
+            });
     }
 }

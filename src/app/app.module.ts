@@ -19,6 +19,18 @@ import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MenubarModule} from 'primeng/menubar';
+import {CheckboxModule} from 'primeng/checkbox';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {CarouselModule} from 'primeng/carousel';
+import {ToastModule} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
+import {DataViewModule} from 'primeng/dataview';
+import {DropdownModule} from 'primeng/dropdown';
+import {PanelModule} from 'primeng/panel';
+import {CarService} from './_services/carservice';
+import {ChartModule} from 'primeng/chart';
+import {GalleriaModule} from 'primeng/galleria';
 
 @NgModule({
     declarations: [
@@ -43,9 +55,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         DialogModule,
         ButtonModule,
         PanelMenuModule,
-        AppRoutingModule
+        AppRoutingModule,
+        MenubarModule,
+        CheckboxModule,
+        RadioButtonModule,
+        CarouselModule,
+        ToastModule,
+        DataViewModule,
+        DropdownModule,
+        PanelModule,
+        ChartModule,
+        GalleriaModule
     ],
-    providers: [],
+    providers: [
+        MessageService,
+        CarService,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

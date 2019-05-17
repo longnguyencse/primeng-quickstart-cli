@@ -5,43 +5,49 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SelectivePreloadingStrategyService} from './_services/selective-preloading-strategy.service';
 import {AppComponent} from './app.component';
 import {ContactComponent} from './contact/contact.component';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {LoginComponent} from './login/login.component';
 
 
 const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-    // outlet: 'popup'
-  },
-  {
-    path: 'welcome',
-    component: AppComponent,
-    // outlet: 'popup'
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-    // outlet: 'popup'
-  },
-  { path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+    {
+        path: 'home',
+        component: HomeComponent,
+    },
+    {
+        path: 'welcome',
+        component: WelcomeComponent,
+    },
+    {
+        path: 'contact',
+        component: ContactComponent,
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+    },
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(
-        appRoutes,
-        {
-          enableTracing: false, // <-- debugging purposes only
-          preloadingStrategy: SelectivePreloadingStrategyService,
-        }
-    )
-  ],
-  exports: [
-    RouterModule
-  ]
+    imports: [
+        RouterModule.forRoot(
+            appRoutes,
+            {
+                enableTracing: false, // <-- debugging purposes only
+                preloadingStrategy: SelectivePreloadingStrategyService,
+            }
+        )
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

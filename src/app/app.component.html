@@ -1,15 +1,23 @@
-<nav>
-    <ul>
-        <li routerLinkActive="active">
-            <a routerLink="/welcome" > Welcome</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="/contact" > Contact </a>
-        </li>
-    </ul>
-</nav>
+<!--<nav>-->
+<!--    <ul>-->
+<!--        <li routerLinkActive="active">-->
+<!--            <a routerLink="/welcome" > Welcome</a>-->
+<!--        </li>-->
+<!--        <li routerLinkActive="active">-->
+<!--            <a routerLink="/contact" > Contact </a>-->
+<!--        </li>-->
+<!--        <li routerLinkActive="active">-->
+<!--            <a routerLink="/login" > Login </a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+
+<p-menubar [model]="items">
+    <input type="text" pInputText placeholder="Search">
+    <button pButton label="Logout" icon="fa fa-sign-out"></button>
+</p-menubar>
+
 <div class="layout-wrapper">
     <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
-

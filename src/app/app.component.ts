@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from './_model/car';
 import {Login} from './_model/login';
+import {MenuItem} from 'primeng/api';
 
 import { CarService } from './_services/carservice';
 
@@ -30,10 +31,37 @@ export class AppComponent implements OnInit {
     cols: any[];
 
     constructor(private carService: CarService) { }
+    items: MenuItem[];
+
 
     ngOnInit() {
         this.carService.getCarsSmall().then(cars => this.cars = cars);
-
+        this.items = [
+            {
+                label: 'Welcome',
+                routerLink: ['/welcome'],
+                items: [{
+                    label: 'New',
+                    icon: 'pi pi-fw pi-plus',
+                    items: [
+                        {label: 'Project'},
+                        {label: 'Other'},
+                    ]
+                },
+                    {label: 'Open'},
+                    {label: 'Quit'}
+                ]
+            },
+            {
+                label: 'Contact',
+                routerLink: ['/contact'],
+                icon: 'pi pi-fw pi-pencil',
+                items: [
+                    {label: 'Delete', icon: 'pi pi-fw pi-trash'},
+                    {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
+                ]
+            }
+        ];
         this.cols = [
             { field: 'vin', header: 'Vin' },
             { field: 'year', header: 'Year' },
