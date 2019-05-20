@@ -31,6 +31,7 @@ import {PanelModule} from 'primeng/panel';
 import {CarService} from './_services/carservice';
 import {ChartModule} from 'primeng/chart';
 import {GalleriaModule} from 'primeng/galleria';
+import { LearnPositionComponent } from './learn-position/learn-position.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import {GalleriaModule} from 'primeng/galleria';
         HomeComponent,
         WelcomeComponent,
         ContactComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        LearnPositionComponent
     ],
     imports: [
         BrowserModule,

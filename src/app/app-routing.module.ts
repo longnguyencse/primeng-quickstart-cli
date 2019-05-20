@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {ContactComponent} from './contact/contact.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {LoginComponent} from './login/login.component';
+import {LearnPositionComponent} from './learn-position/learn-position.component';
 
 
 const appRoutes: Routes = [
@@ -25,6 +26,10 @@ const appRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
+    },
+    {
+        path: 'position',
+        component: LearnPositionComponent,
     },
     {
         path: '',

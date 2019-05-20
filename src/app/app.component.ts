@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
         this.carService.getCarsSmall().then(cars => this.cars = cars);
         this.items = [
             {
+                label: 'Home',
+                routerLink: ['/home'],
+            },
+            {
                 label: 'Welcome',
                 routerLink: ['/welcome'],
                 items: [{
@@ -60,6 +64,10 @@ export class AppComponent implements OnInit {
                     {label: 'Delete', icon: 'pi pi-fw pi-trash'},
                     {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
                 ]
+            },
+            {
+                label: 'Position',
+                routerLink: ['/position'],
             }
         ];
         this.cols = [
