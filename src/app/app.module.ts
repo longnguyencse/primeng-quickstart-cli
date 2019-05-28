@@ -32,6 +32,7 @@ import {CarService} from './_services/carservice';
 import {ChartModule} from 'primeng/chart';
 import {GalleriaModule} from 'primeng/galleria';
 import { LearnPositionComponent } from './learn-position/learn-position.component';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
     declarations: [
@@ -67,7 +68,8 @@ import { LearnPositionComponent } from './learn-position/learn-position.componen
         DropdownModule,
         PanelModule,
         ChartModule,
-        GalleriaModule
+        GalleriaModule,
+        PasswordModule
     ],
     providers: [
         MessageService,

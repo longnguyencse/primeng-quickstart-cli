@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { Car } from './_model/car';
 import {Login} from './_model/login';
 import {MenuItem} from 'primeng/api';
@@ -16,6 +16,8 @@ export class PrimeCar implements Car {
     providers: [CarService]
 })
 export class AppComponent implements OnInit {
+    @ViewChild('login_view', {read: Element}) loginE: ElementRef;
+
     displayDialog: boolean;
 
     car: Car = new PrimeCar();
@@ -33,6 +35,7 @@ export class AppComponent implements OnInit {
     constructor(private carService: CarService) { }
     items: MenuItem[];
 
+    islogin = false;
 
     ngOnInit() {
         this.carService.getCarsSmall().then(cars => this.cars = cars);
@@ -117,5 +120,10 @@ export class AppComponent implements OnInit {
 
     findSelectedCarIndex(): number {
         return this.cars.indexOf(this.selectedCar);
+    }
+
+    showlogin(e) {
+        this.islogin = !this.islogin;
+        console.log(this.islogin);
     }
 }

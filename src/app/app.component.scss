@@ -7,3 +7,18 @@
   background-color: rebeccapurple;
   flex: 1;
 }
+
+.login-wraps {
+  position: absolute;
+  //top: 15vh;
+  //left: 25vw;
+  //width: 50vw;
+  //height: 50vh;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  opacity: 0.8;
+  background-color: lightslategray;
+
+}
